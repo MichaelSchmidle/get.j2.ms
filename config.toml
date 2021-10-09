@@ -1,0 +1,11 @@
+baseURL = 'https://get.j2.ms/'
+languageCode = 'en-us'
+title = 'get.j2.ms'
+
+[params]
+description = 'j2.ms Download Server'
+
+[menu]
+[[menu.folders]]
+name = "Foundation"
+url = "foundation/"

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if not .IsHome }}{{ .Title | markdownify }} · {{ end }}{{ .Site.Title | markdownify }}</title>
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    {{ hugo.Generator }}
+    <link rel="shortcut icon" href='{{ "favicon.ico" | relURL }}'>
+    <link rel="stylesheet" type="text/css" href="https://jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css">
+</head>
+
+<body>
+    <section class="hero is-fullheight has-text-centered{{ if .IsHome }} is-bold is-primary{{ end }}">
+        <main class="hero-body">
+            <div class="container">
+                {{ block "hero" . }}{{ end }}
+                {{ block "folders" . }}{{ end }}
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> · {{ .Site.Params.Description }}</p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
