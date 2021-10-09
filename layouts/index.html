@@ -46,7 +46,10 @@
 <div class="tabs is-toggle is-toggle-rounded is-centered">
     <ul>
         {{ range .Site.Menus.folders }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}" class="icon-text">
+                {{ if .Params.locked }}<span class="icon"><i class="las la-lock"></i></span>{{ end }}
+                <span>{{ .Name }}</span>
+            </a></li>
         {{ end }}
     </ul>
 </div>
