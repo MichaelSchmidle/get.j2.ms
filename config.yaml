@@ -11,3 +11,7 @@ menu:
     url: "foundation/"
     params:
       locked: true
+  - name: "Invasion"
+    url: "invasion/"
+    params:
+      locked: true
